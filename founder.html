@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/pinklogo.png" size="100x100"/>
+    <title>Founder - ALOP</title>
+    <!--LINKS CSS & FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="fstyles.css">
+</head>
+<body>
+    <!-- NAVBAR HEADER-->
+    <header class="navbar">
+        <a href="index.html">
+            <img src="./img/pinklogo.png" alt="ALOP logo" class="logo">
+        </a>
+        <button class="menu-tab" aria-label="Menu Tab">
+            <span class="material-icons">menu</span>
+        </button>
+        <nav>
+            <a href="index.html" class="refunder">Home</a>
+            <a href="about.html" class="refunder">About</a>
+            <a href="founder.html" class="active refunder">Founder</a>
+            <a href="donation.html" class="donate-btn">Donate</a>
+        </nav>
+    </header>
+    <!-- DOCUMENT -->
+    <main class="founder-section">
+        <h1>Words From Our Founder</h1>
+        <div class="founder-content">
+            <div class="founder-img">
+                <img src="./img/landimage1.jpg" alt="Founder Jackie Ennis" class="founder-photo">
+            </div>
+            <div class="quote">
+                <p><strong>"At ALOP, my mission is to empower individuals through education.</strong><br>
+                I am deeply guided by the belief that a lack of knowledge can hinder personal growth and cause one to perish.
+                Inspired by <i>3 John 2</i> and <i>Hosea 4:6</i>, I am committed to fostering prosperity and well-being for all.<br>
+                Through knowledge, we uplift and give — through LOVE."</p>
+                <p class="signature"><em>— Jacqueline Ennis, Founder of ALOP</em></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="foot-left">
+            <h3>A <i>Love</i> Of People Foundation</h3>
+            <p>Cincinnati, OH, USA | Phone: (513) 917-0168</p>
+            <p>Email: ALoveOfPeople3@gmail.com</p>
+        </div> 
+    </footer>   
+</body>
+<script>
+  const menuTab = document.querySelector('.menu-tab');
+    const nav = document.querySelector('header nav');
+
+    menuTab.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    });
+</script>
+</html>

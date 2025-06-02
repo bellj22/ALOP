@@ -1,0 +1,98 @@
+/* This file contians shared contents from each page of website. */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+:root {
+  --color-primary: #FE74A4;
+  --color-primary-dark: #D0276D;
+  --font-main: 'Instrument Sans', sans-serif;
+  --font-header: 'Montserrat', sans-serif;
+  --body-text-color: #222;
+  --background-default: #f9f9f9;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--body-text-color);
+  background-color: var(--background-default);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+h1, h2, h3, .navbar nav a, .donate-btn {
+  font-family: var(--font-header);
+}
+
+.navbar, .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar nav, nav {
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  gap: 60px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar nav .active {
+  text-decoration: underline;
+}
+
+a, .donate-btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.donate-btn {
+  background-color: var(--color-primary);
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.donate-btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.refunder:hover {
+  color: var(--color-primary-dark);
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+.footer {
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.foot-left {
+  font-size: 13px;
+  max-width: 600px;
+}

@@ -1,0 +1,143 @@
+@import url(sharedstyle.css);
+
+:root {
+  --bacground-default: #f9f9f9;
+  --color-primary: #D0276D;
+  --color-primary-dark: #A01F59;
+}
+
+
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.founder-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.founder-photo {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin: 0 auto 30px;
+  border-radius: 10px;
+}
+
+.founder-section h1 {
+  color: #D0276D;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.founder-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+.quote {
+  line-height: 1.8;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 auto; 
+}
+
+.quote strong {
+  font-size: 1.1 rem;
+}
+
+.signature {
+  margin-top: 20px;
+  font-style: italic;
+  color: #444;
+}
+.footer {
+  background-color: #D0276D;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.foot-left {
+  font-size: 13px;
+  max-width: 600px;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+  }
+
+  nav.show {
+    right: 0;
+  }
+
+  nav a{
+    padding: 15px 30px;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+    color: black;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  .quote {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .menu-tab {
+    position: absolute;
+    align-items: center;
+    right: 20px;
+    background: none;
+    color:#FE74A4;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 1100;
+  }
+
+  .foot-left {
+    padding: 10px 0;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-tab {
+    display: none;
+  }
+
+  .navbar nav {
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    box-shadow: none;
+    padding-top: 0;
+    transition: none;
+  }
+}

@@ -1,0 +1,166 @@
+@import url(sharedstyle.css);
+
+:root {
+  --background-default: #f7f7f7;
+  --color-primary: #FE74A4;
+  --color-primary-dark: #D0276D;
+}
+
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-abt, .mission-content {
+    padding: 40px 20px;
+}
+
+.section-abt {
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.mission-content {
+    max-width: 1200px;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.underline {
+    width: 150px;
+    height: 2px;
+    background-color:#D0276D;
+    border: none;
+    margin-top: 20px;
+}
+
+.abt-text {
+    flex: 1 1 500px;
+}
+
+.abt-text h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.abt-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.abt-image {
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+.abt-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: #FFA3C3;
+}
+
+
+/* DEVICES MEDIA */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+  }
+
+  nav.show {
+    right: 0;
+  }
+
+  nav a{
+    padding: 15px 30px;
+    font-size: 15px;
+    border-bottom: 1px solid #ddd;
+    color: black;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  .menu-tab {
+    position: absolute;
+    align-items: center;
+    right: 20px;
+    background: none;
+    color:#FE74A4;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 1100;
+  }
+
+  .mission-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .abt-text, .abt-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .abt-image img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .abt-text h1 {
+    font-size: 28px;
+  }
+
+  .abt-text p {
+    font-size: 16px;
+  }
+
+  .foot-left {
+      padding: 10px 0;
+      font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-tab {
+    display: none;
+  }
+
+  .navbar nav {
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    box-shadow: none;
+    padding-top: 0;
+    transition: none;
+  }
+}
+

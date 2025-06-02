@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/pinklogo.png" size="100x100"/>
+    <title>About - ALOP</title>
+    <!--LINKS CSS & FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="aboutstyles.css">
+
+</head>
+<body>
+    <!-- NAVBAR HEADER-->
+    <header class="navbar">
+        <a href="index.html">
+            <img src="./img/pinklogo.png" alt="ALOP logo" class="logo">
+        </a>
+        <button class="menu-tab" aria-label="Menu Tab">
+            <span class="material-icons">menu</span>
+        </button>
+        <nav>
+            <a href="index.html" class="refunder">Home</a>
+            <a href="about.html" class="active refunder">About</a>
+            <a href="founder.html" class="refunder">Founder</a>
+            <a href="donation.html" class="donate-btn">Donate</a>
+        </nav>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section class="section-abt">
+        <div class="mission-content">
+            <div class="abt-text">
+                <h1>About ALOP</h1>
+                <p>
+                    Our commitment is to empower undeserved communities by providing meaningful opportunities, essential resources, and securing financial support to enhance educational access and quality.
+                </p>
+                <p>
+                    Guided by the wisdom of Hosea 4:6, "My people are destroyed for lack of knowledge," we recognize the trans-formative power of education. We strive to bridge knowledge gaps and foster a brighter future for individuals and families through comprehensive educational initiatives.
+                </p>
+                <hr class="underline">
+            </div>
+            <div class="abt-image">
+                <img src="./img/aboutimg.jpg" alt="Mother and daughter with assignment">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="foot-left">
+            <h3>A <i>Love</i> Of People Foundation</h3>
+            <p>Cincinnati, OH, USA | Phone: (513) 917-0168</p>
+            <p>Email: ALoveOfPeople3@gmail.com</p>
+        </div>
+    </footer>   
+    
+</body>
+<script>
+    const menuTab = document.querySelector('.menu-tab');
+    const nav = document.querySelector('header nav');
+
+    menuTab.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    });
+</script>
+</html>

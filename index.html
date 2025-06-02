@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/pinklogo.png" size="100x100"/>
+    <title>ALOP Homepage</title>
+    <!--LINKS CSS & FONTS -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="indexstyles.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html">
+            <img src="./img/pinklogo.png" alt="ALOP logo" class="logo">
+        </a>
+        <button class="menu-tab" aria-label="Menu Tab">
+            <span class="material-icons">menu</span>
+        </button>
+        <nav>
+            <a href="index.html" class="active refunder">Home</a>
+            <a href="about.html" class="refunder">About</a>
+            <a href="founder.html" class="refunder">Founder</a>
+            <a href="donation.html" class="donate-btn">Donate</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>A Love<br>Of People</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="vision">
+        <div class="vision-left">
+            <h2>Empowering <br>Undeserved <br>Communities.</h2>
+            <a href="about.html" class="button">Our Vision</a>
+        </div>
+        <div class="vision-right">
+            <p>We are <strong>committed</strong> to empower communities through educational opportunities.</p>
+            <p>There are many communities that are in need of essential educational resources. At ALOP, we work to create pathways to knowledge and opportunities.</p>
+        </div>
+    </section>
+
+    <section class="section about-section fade-in-section">
+        <section class="section_container about_container">
+            <div class="about_content">
+                <h2 class="section_header">About ALOP</h2>
+                <p>
+                    Learn more about ALOP's mission, purpose, <br>and ways we support our community.
+                </p>
+                <a href="about.html" class="button">Learn More</a>
+            </div>
+            <div class="about_image">
+                <img src="./img/aboutnewimg.jpg" alt="woman reading with child">
+            </div>
+        </section>
+    </section>
+
+    <section class="section founder-section fade-in-section">
+        <section class="section_container founder_container" id="founder">
+            <div class="founder_image">
+                <img src="./img/landimage2.jpg" alt="book holding">
+            </div>
+            <div class="founder_content">
+                <h2>Meet The Founder</h2>
+                <p>
+                    Learn more about the founder, <i>Jacqueline Ennis</i><br> of ALOP's nonprofit
+                    organization. <br>Find out more about her vision. 
+                </p>
+                <a href="founder.html" class="button">Founder</a>
+            </div>
+        </section>
+    </section>
+
+    <section class="section donate-section fade-in-section">
+        <section class="section_container donate_container">
+            <div class="donate_content">
+                <h2>Take Action</h2>
+                <p>
+                    Want to take the next steps? <br>Become a contributor to our cause 
+                    and make a donation.
+                </p>
+                <a href="donation.html" class="button">Donate</a>
+            </div>
+            <div class="donate_image">
+                <img src="./img/landimage3.jpg" alt="helping children">
+            </div>
+        </section>
+    </section>
+
+    <section class="quote-sec">
+        <blockquote>
+            <p>" My people are destroyed for a lack of knowledge "</p>
+            <cite>- Hosea 4:6, Holy Bible</cite>
+        </blockquote>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="foot-left">
+            <h3>A <i>Love</i> Of People Foundation</h3>
+            <p>Cincinnati, OH, USA | Phone: (513) 917-0168</p>
+            <p>Email: ALoveOfPeople3@gmail.com</p>
+        </div>
+    </footer>  
+    <script>
+        const sections = document.querySelectorAll('.fade-in-section');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // only animate once
+            }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script> 
+
+</body>
+<script>
+  const menuTab = document.querySelector('.menu-tab');
+    const nav = document.querySelector('header nav');
+
+    menuTab.addEventListener('click', () => {
+    nav.classList.toggle('show');
+    });
+</script>
+</html>

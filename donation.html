@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/pinklogo.png" size="100x100"/>
+    <title>Donate - ALOP</title>
+    <!--LINKS CSS & FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="donatestyles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="overlay"></div> 
+        <div class="nav">
+            <a href="index.html">
+                <img src="./img/pinklogo.png" alt="ALOP logo" class="logo">
+            </a>
+            <button class="menu-tab" aria-label="Menu Tab">
+                <span class="material-icons">menu</span>
+            </button>
+            <nav>
+                <a href="index.html" class="refunder">Home</a>
+                <a href="about.html" class="refunder">About</a>
+                <a href="founder.html" class="refunder">Founder</a>
+                <a href="donation.html" class="donate-btn">Donate</a>
+            </nav>
+        </div>
+        <div class="top-text">
+        <h1>Make a donation</h1>
+        </div>
+    </header>
+
+    <section class="mission">
+        <h2>Support Our Mission</h2>
+        <p>
+            Your donation helps us empower individuals through education, provide critical resources,
+            and create way for knowledge, and opportunities to be accessible to all.<br>
+            Every gift makes a difference.
+        </p>
+        <p>
+            Click here to supoort our cause!
+        </p>
+        <button class="donation-btn-link" onclick="donateMessage()">Donate</a>
+    </section>
+    <!-- Donation Message Script-->
+     <!--Since donation section is in progress, user is alerted to make
+     a contact for further donating instructions.-->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="foot-left">
+            <h3>A <i>Love</i> Of People Foundation</h3>
+            <p>Cincinnati, OH, USA | Phone: (513) 917-0168</p>
+            <p>Email: ALoveOfPeople3@gmail.com</p>
+        </div>
+    </footer>   
+    <div id="donation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>We Appreciate You!</h2>
+            <p>To make a further donation, please contact us at:</p>
+            <p><strong>(513) 917-0168</strong></p>
+            <p>Or email us at <strong>ALoveOfPeople3@gmail.com</strong></p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuTab = document.querySelector('.menu-tab');
+            const nav = document.querySelector('header nav');
+
+            if (menuTab && nav) {
+            menuTab.addEventListener('click', () => {
+                nav.classList.toggle('show');
+            });
+            }
+        });
+
+        function donateMessage() {
+            document.getElementById('donation-modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('donation-modal').style.display = 'none';
+        }
+
+        // Optional: close when clicking outside modal content
+        window.onclick = function(event) {
+            const modal = document.getElementById('donation-modal');
+            if (event.target === modal) {
+            closeModal();
+            }
+        };
+    </script>
+
+
+</body>
+</html>
